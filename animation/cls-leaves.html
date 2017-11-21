@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <title>CLS animation with leaves</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <script type="text/javascript" src="library/paper-full.js"></script>
+  <script type="text/paperscript" canvas="canvas">
+
+  //variables
+  var letters, letters2, letters3, letters4, letters5;
+  var top, middle, bottom, path;
+  var flakes1, flakes2, flakes3, flakes4, flakes5;
+  var pos1, pos2, pos3, pos4, pos5;
+  var tmp1, tmp2, tmp3, tmp4, tmp5;
+
+  // letters
+  var letters = new PointText({point: [0, 275], content: 'Geschäftsbericht', justification: 'right'});
+  var letters2 = new PointText({point: [0, 125], content: '', justification: 'right'});
+  var letters3 = new PointText({point: [0, 425], content: '', justification: 'right'});
+  var letters4 = new PointText({point: [0, 275], content: '', justification: 'right'});
+  var letters5 = new PointText({point: [990, 275], content: '', justification: 'left'});
+
+  group1 = new Group(letters, letters2, letters3, letters4, letters5);
+  group1.style = {fontFamily: 'Open Sans', fontSize: 33, fillColor: 'grey', fontWeight: 'bold'};
+
+  // white background - middle
+  var middle = new Rectangle(330, 0, 330, 500);
+  var path = new Path.Rectangle(middle);
+  path.fillColor = 'white';
+
+  // function way1
+  function way1(pos){x = 363; y = pos*500; return [x,y];}
+
+  // function way2
+  function way2(pos){x = 429; y = pos*500; return [x,y];}
+
+  // function way3
+  function way3(pos){x = 495; y = pos*500; return [x,y];}
+
+  // function way4
+  function way4(pos){x = 561; y = pos*500; return [x,y];}
+
+  // function way5
+  function way5(pos){x = 627; y = pos*500; return [x,y];}
+
+  // leaves 1
+  var pos1 = [0/500, 125/500, 250/500, 375/500];
+  flakes1 = [];
+  for (i = 0; i < pos1.length; i++) {
+    flakes1[i] = new Raster ('images/leaf-1.png');
+    flakes1[i].scale(0.10);
+    flakes1[i].position = way1(pos1[i]);
+  }
+  var tmp1;
+
+  // leaves 2
+  var pos2 = [62.5/500, 187.5/500, 312.5/500, 437.5/500];
+  flakes2 = [];
+  for (i = 0; i < pos2.length; i++) {
+    flakes2[i] = new Raster ('images/leaf-2.png');
+    flakes2[i].scale(0.10);
+    flakes2[i].position = way2(pos2[i]);
+  }
+  var tmp2;
+
+  // leaves 3
+  var pos3 = [0/500, 125/500, 250/500, 375/500];
+  flakes3 = [];
+  for (i = 0; i < pos3.length; i++) {
+    flakes3[i] = new Raster ('images/leaf-3.png');
+    flakes3[i].scale(0.10);
+    flakes3[i].position = way3(pos3[i]);
+  }
+  var tmp3;
+
+  // leaves 4
+  var pos4 = [62.5/500, 187.5/500, 312.5/500, 437.5/500];
+  flakes4 = [];
+  for (i = 0; i < pos4.length; i++) {
+    flakes4[i] = new Raster ('images/leaf-4.png');
+    flakes4[i].scale(0.10);
+    flakes4[i].position = way4(pos4[i]);
+  }
+  var tmp4;
+
+  // leaves 5
+  var pos5 = [0/500, 125/500, 250/500, 375/500];
+  flakes5 = [];
+  for (i = 0; i < pos5.length; i++) {
+    flakes5[i] = new Raster ('images/leaf-5.png');
+    flakes5[i].scale(0.10);
+    flakes5[i].position = way5(pos5[i]);
+  }
+  var tmp5;
+
+  // animation
+  function onFrame(event) {
+
+    // letters animation
+    letters.position.x += 2.0;
+    if (letters.bounds.right > 660) {letters.content = '';}
+
+    letters2.position.x += 2.0;
+    if (letters2.bounds.right > 660) {
+      letters2.content = 'Rapport annuel'; letters2.fillColor = 'grey';
+      if (letters2.position.x > 845) {letters2.position.x = 845;}
+    }
+
+    letters3.position.x += 2.0;
+    if (letters3.bounds.right > 660) {
+      letters3.content = 'Relazione annuale'; letters3.fillColor = 'grey';
+      if (letters3.position.x > 825) {letters3.position.x = 825;}
+    }
+
+    letters4.position.x += 2.0;
+    if (letters4.bounds.right > 660) {
+      letters4.content = 'Annual report'; letters4.fillColor = 'grey';
+      if (letters4.position.x > 860) {letters4.position.x = 860;}
+    }
+
+    letters5.position.x -= 2.0;
+    if (letters5.bounds.left < 330) {
+      letters5.content = 'Geschäftsbericht';
+      if (letters5.position.x < 165) {letters5.position.x = 165;}
+    }
+
+    // leaves 1 animation
+    for (i = 0; i < pos1.length; i++) {
+      pos1[i] = (pos1[i] + 0.00050) % 1;
+      tmp1 = way1(pos1[i]);
+      flakes1[i].position.x = tmp1[0];
+      flakes1[i].position.y = tmp1[1];
+    }
+
+    // leaves 2 animation
+    for (i = 0; i < pos2.length; i++) {
+      pos2[i] = (pos2[i] + 0.00150) % 1;
+      tmp2 = way2(pos2[i]);
+      flakes2[i].position.x = tmp2[0];
+      flakes2[i].position.y = tmp2[1];
+    }
+
+    // leaves 3 animation
+    for (i = 0; i < pos3.length; i++) {
+      pos3[i] = (pos3[i] + 0.00075) % 1;
+      tmp3 = way3(pos3[i]);
+      flakes3[i].position.x = tmp3[0];
+      flakes3[i].position.y = tmp3[1];
+    }
+
+    // leaves 4 animation
+    for (i = 0; i < pos4.length; i++) {
+      pos4[i] = (pos4[i] + 0.00125) % 1;
+      tmp4 = way4(pos4[i]);
+      flakes4[i].position.x = tmp4[0];
+      flakes4[i].position.y = tmp4[1];
+    }
+
+    // leaves 5 animation
+    for (i = 0; i < pos5.length; i++) {
+      pos5[i] = (pos5[i] + 0.00100) % 1;
+      tmp5 = way5(pos5[i]);
+      flakes5[i].position.x = tmp5[0];
+      flakes5[i].position.y = tmp5[1];
+    }
+  }
+
+  // white background - top
+  var top = new Rectangle(0, 0, 990, 50);
+  var path = new Path.Rectangle(top);
+  path.fillColor = 'white';
+
+  // white background - bottom
+  var bottom = new Rectangle(0, 475, 990, 50);
+  var path = new Path.Rectangle(bottom);
+  path.fillColor = 'white';
+
+  </script>
+  </head>
+  <body>
+    <canvas id="canvas" resize></canvas>
+  </body>
+  </html>
