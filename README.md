@@ -4,6 +4,6 @@
 
 # <a href="https://cdn.rawgit.com/jelena-simovic-rota/cls-animation/e03c84a3/start-leaves.html">CLS animation with leaves</a>
 
-# <a href="https://github.com/jelena-simovic-rota/cls-animation/blob/master/start-snowflakes.html">CLS animation withsnowflakes</a>
+# <a href="https://cdn.rawgit.com/jelena-simovic-rota/cls-animation/e03c84a3/start-snowflakes.html">CLS animation with snowflakes</a>
 
 Icons designed by Freepik from Flaticon.
