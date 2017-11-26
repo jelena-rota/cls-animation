@@ -6,4 +6,4 @@
 
 # <a href="https://cdn.rawgit.com/jelena-simovic-rota/cls-animation/e03c84a3/start-decorations.html">CLS animation with Christmas decoration</a>
 
-Icons designed by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from Flaticon.
+Icons designed by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com">Flaticon</a>.
