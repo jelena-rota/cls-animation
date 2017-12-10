@@ -26,7 +26,7 @@
   var letters5 = new PointText({point: [990, 275], content: '', justification: 'left'});
 
   group1 = new Group(letters, letters2, letters3, letters4, letters5);
-  group1.style = {fontFamily: 'Open Sans', fontSize: 33, fillColor: 'grey', fontWeight: 'bold'};
+  group1.style = {fontFamily: 'Open Sans', fontSize: 33, fillColor: 'black'};
 
   // white background - middle
   var middle = new Rectangle(330, 0, 330, 500);
@@ -107,19 +107,19 @@
 
     letters2.position.x += 2.0;
     if (letters2.bounds.right > 660) {
-      letters2.content = 'Rapport annuel'; letters2.fillColor = 'grey';
+      letters2.content = 'Rapport annuel'; letters2.fillColor = 'black';
       if (letters2.position.x > 845) {letters2.position.x = 845;}
     }
 
     letters3.position.x += 2.0;
     if (letters3.bounds.right > 660) {
-      letters3.content = 'Relazione annuale'; letters3.fillColor = 'grey';
+      letters3.content = 'Relazione annuale'; letters3.fillColor = 'black';
       if (letters3.position.x > 825) {letters3.position.x = 825;}
     }
 
     letters4.position.x += 2.0;
     if (letters4.bounds.right > 660) {
-      letters4.content = 'Annual report'; letters4.fillColor = 'grey';
+      letters4.content = 'Annual report'; letters4.fillColor = 'black';
       if (letters4.position.x > 860) {letters4.position.x = 860;}
     }
 
