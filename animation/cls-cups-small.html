@@ -52,7 +52,7 @@
   var pos1 = [75/300, 150/300, 225/300, 300/300];
   snowflakes1 = [];
   for (i = 0; i < pos1.length; i++) {
-    snowflakes1[i] = new Raster ('images/cup-1.png');
+    snowflakes1[i] = new Raster ('images/cup-1.svg');
     snowflakes1[i].scale(0.060);
     snowflakes1[i].position = way1(pos1[i]);
   }
@@ -62,8 +62,8 @@
   var pos2 = [37.5/300, 112.5/300, 187.5/300, 262.5/300];
   snowflakes2 = [];
   for (i = 0; i < pos2.length; i++) {
-    snowflakes2[i] = new Raster ('images/cup-5.png');
-    snowflakes2[i].scale(0.055);
+    snowflakes2[i] = new Raster ('images/cup-2.svg');
+    snowflakes2[i].scale(0.065);
     snowflakes2[i].position = way2(pos2[i]);
   }
   var tmp2;
@@ -72,7 +72,7 @@
   var pos3 = [75/300, 150/300, 225/300, 300/300];
   snowflakes3 = [];
   for (i = 0; i < pos3.length; i++) {
-    snowflakes3[i] = new Raster ('images/cup-4.png');
+    snowflakes3[i] = new Raster ('images/cup-3.svg');
     snowflakes3[i].scale(0.060);
     snowflakes3[i].position = way3(pos3[i]);
   }
@@ -82,7 +82,7 @@
   var pos4 = [37.5/300, 112.5/300, 187.5/300, 262.5/300];
   snowflakes4 = [];
   for (i = 0; i < pos4.length; i++) {
-    snowflakes4[i] = new Raster ('images/cup-3.png');
+    snowflakes4[i] = new Raster ('images/cup-4.svg');
     snowflakes4[i].scale(0.060);
     snowflakes4[i].position = way4(pos4[i]);
   }
@@ -92,7 +92,7 @@
   var pos5 = [75/300, 150/300, 225/300, 300/300];
   snowflakes5 = [];
   for (i = 0; i < pos5.length; i++) {
-    snowflakes5[i] = new Raster ('images/cup-2.png');
+    snowflakes5[i] = new Raster ('images/cup-5.svg');
     snowflakes5[i].scale(0.060);
     snowflakes5[i].position = way5(pos5[i]);
   }
@@ -129,41 +129,41 @@
       if (letters5.position.x < 95) {letters5.position.x = 95;}
     }
 
-    // cups 1 animation
+    // decorations 1 animation
     for (i = 0; i < pos1.length; i++) {
-      pos1[i] = (pos1[i] + 0.00075) % 1;
+      pos1[i] = (pos1[i] + 0.00050) % 1;
       tmp1 = way1(pos1[i]);
       snowflakes1[i].position.x = tmp1[0];
       snowflakes1[i].position.y = tmp1[1];
     }
 
-    // cups 2 animation
+    // decorations 2 animation
     for (i = 0; i < pos2.length; i++) {
-      pos2[i] = (pos2[i] + 0.00175) % 1;
+      pos2[i] = (pos2[i] + 0.00150) % 1;
       tmp2 = way2(pos2[i]);
       snowflakes2[i].position.x = tmp2[0];
       snowflakes2[i].position.y = tmp2[1];
     }
 
-    // cups 3 animation
+    // decorations 3 animation
     for (i = 0; i < pos3.length; i++) {
-      pos3[i] = (pos3[i] + 0.00100) % 1;
+      pos3[i] = (pos3[i] + 0.00075) % 1;
       tmp3 = way3(pos3[i]);
       snowflakes3[i].position.x = tmp3[0];
       snowflakes3[i].position.y = tmp3[1];
     }
 
-    // cups 4 animation
+    // decorations 4 animation
     for (i = 0; i < pos4.length; i++) {
-      pos4[i] = (pos4[i] + 0.00150) % 1;
+      pos4[i] = (pos4[i] + 0.00125) % 1;
       tmp4 = way4(pos4[i]);
       snowflakes4[i].position.x = tmp4[0];
       snowflakes4[i].position.y = tmp4[1];
     }
 
-    // cups 5 animation
+    // decorations 5 animation
     for (i = 0; i < pos5.length; i++) {
-      pos5[i] = (pos5[i] + 0.00125) % 1;
+      pos5[i] = (pos5[i] + 0.00100) % 1;
       tmp5 = way5(pos5[i]);
       snowflakes5[i].position.x = tmp5[0];
       snowflakes5[i].position.y = tmp5[1];
