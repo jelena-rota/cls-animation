@@ -1,6 +1,6 @@
 # <a href="https://cdn.rawgit.com/jelena-simovic-rota/cls-animation/05f341ef/start-leaves.html">CLS animation with leaves</a>
 
-# <a href="https://cdn.rawgit.com/jelena-simovic-rota/cls-animation/05f341ef/start-cups.html">CLS animation with coffee cups</a>
+# <a href="https://cdn.rawgit.com/jelena-simovic-rota/cls-animation/f0219dd2/animation/cls-cups.html">CLS animation with cups</a>
 
 # <a href="https://cdn.rawgit.com/jelena-simovic-rota/cls-animation/05f341ef/start-snowflakes.html">CLS animation with snowflakes</a>
 
