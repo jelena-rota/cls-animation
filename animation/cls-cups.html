@@ -24,7 +24,6 @@
   var letters3 = new PointText({point: [0, 425], content: '', justification: 'right'});
   var letters4 = new PointText({point: [0, 275], content: '', justification: 'right'});
   var letters5 = new PointText({point: [990, 275], content: '', justification: 'left'});
-
   group1 = new Group(letters, letters2, letters3, letters4, letters5);
   group1.style = {fontFamily: 'Open Sans', fontSize: 33, fillColor: 'black'};
 
@@ -35,16 +34,12 @@
 
   // function way1
   function way1(pos){x = 363; y = pos*500; return [x,y];}
-
   // function way2
   function way2(pos){x = 429; y = pos*500; return [x,y];}
-
   // function way3
   function way3(pos){x = 495; y = pos*500; return [x,y];}
-
   // function way4
   function way4(pos){x = 561; y = pos*500; return [x,y];}
-
   // function way5
   function way5(pos){x = 627; y = pos*500; return [x,y];}
 
@@ -52,8 +47,8 @@
   var pos1 = [0/500, 125/500, 250/500, 375/500];
   flakes1 = [];
   for (i = 0; i < pos1.length; i++) {
-    flakes1[i] = new Raster ('images/cup-1.png');
-    flakes1[i].scale(0.10);
+    flakes1[i] = new Raster ('images/cup-1.svg');
+    flakes1[i].scale(0.09);
     flakes1[i].position = way1(pos1[i]);
   }
   var tmp1;
@@ -62,7 +57,7 @@
   var pos2 = [62.5/500, 187.5/500, 312.5/500, 437.5/500];
   flakes2 = [];
   for (i = 0; i < pos2.length; i++) {
-    flakes2[i] = new Raster ('images/cup-2.png');
+    flakes2[i] = new Raster ('images/cup-2.svg');
     flakes2[i].scale(0.10);
     flakes2[i].position = way2(pos2[i]);
   }
@@ -72,7 +67,7 @@
   var pos3 = [0/500, 125/500, 250/500, 375/500];
   flakes3 = [];
   for (i = 0; i < pos3.length; i++) {
-    flakes3[i] = new Raster ('images/cup-3.png');
+    flakes3[i] = new Raster ('images/cup-3.svg');
     flakes3[i].scale(0.10);
     flakes3[i].position = way3(pos3[i]);
   }
@@ -82,8 +77,8 @@
   var pos4 = [62.5/500, 187.5/500, 312.5/500, 437.5/500];
   flakes4 = [];
   for (i = 0; i < pos4.length; i++) {
-    flakes4[i] = new Raster ('images/cup-4.png');
-    flakes4[i].scale(0.10);
+    flakes4[i] = new Raster ('images/cup-4.svg');
+    flakes4[i].scale(0.085);
     flakes4[i].position = way4(pos4[i]);
   }
   var tmp4;
@@ -92,7 +87,7 @@
   var pos5 = [0/500, 125/500, 250/500, 375/500];
   flakes5 = [];
   for (i = 0; i < pos5.length; i++) {
-    flakes5[i] = new Raster ('images/cup-5.png');
+    flakes5[i] = new Raster ('images/cup-5.svg');
     flakes5[i].scale(0.10);
     flakes5[i].position = way5(pos5[i]);
   }
@@ -104,25 +99,21 @@
     // letters animation
     letters.position.x += 2.0;
     if (letters.bounds.right > 660) {letters.content = '';}
-
     letters2.position.x += 2.0;
     if (letters2.bounds.right > 660) {
       letters2.content = 'Rapport annuel'; letters2.fillColor = 'black';
       if (letters2.position.x > 845) {letters2.position.x = 845;}
     }
-
     letters3.position.x += 2.0;
     if (letters3.bounds.right > 660) {
       letters3.content = 'Relazione annuale'; letters3.fillColor = 'black';
       if (letters3.position.x > 825) {letters3.position.x = 825;}
     }
-
     letters4.position.x += 2.0;
     if (letters4.bounds.right > 660) {
       letters4.content = 'Annual report'; letters4.fillColor = 'black';
       if (letters4.position.x > 860) {letters4.position.x = 860;}
     }
-
     letters5.position.x -= 2.0;
     if (letters5.bounds.left < 330) {
       letters5.content = 'Geschäftsbericht';
@@ -185,4 +176,4 @@
   <body>
     <canvas id="canvas" resize></canvas>
   </body>
-  </html>
+</html>
