@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>CLS animation with coffee cups</title>
+  <title>CLS animation with cups</title>
 
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -11,7 +11,7 @@
   <script type="text/javascript" src="library/paper-full.js"></script>
   <script type="text/paperscript" canvas="canvas">
 
-  //variables
+  // variables
   var letters, letters2, letters3, letters4, letters5;
   var top, middle, bottom, path;
   var flakes1, flakes2, flakes3, flakes4, flakes5;
@@ -43,7 +43,7 @@
   // function way5
   function way5(pos){x = 627; y = pos*500; return [x,y];}
 
-  // coffee cups 1
+  // cups 1
   var pos1 = [0/500, 125/500, 250/500, 375/500];
   flakes1 = [];
   for (i = 0; i < pos1.length; i++) {
@@ -53,7 +53,7 @@
   }
   var tmp1;
 
-  // coffee cups 2
+  // cups 2
   var pos2 = [62.5/500, 187.5/500, 312.5/500, 437.5/500];
   flakes2 = [];
   for (i = 0; i < pos2.length; i++) {
@@ -63,7 +63,7 @@
   }
   var tmp2;
 
-  // coffee cups 3
+  // cups 3
   var pos3 = [0/500, 125/500, 250/500, 375/500];
   flakes3 = [];
   for (i = 0; i < pos3.length; i++) {
@@ -73,7 +73,7 @@
   }
   var tmp3;
 
-  // coffee cups 4
+  // cups 4
   var pos4 = [62.5/500, 187.5/500, 312.5/500, 437.5/500];
   flakes4 = [];
   for (i = 0; i < pos4.length; i++) {
@@ -83,7 +83,7 @@
   }
   var tmp4;
 
-  // coffee cups 5
+  // cups 5
   var pos5 = [0/500, 125/500, 250/500, 375/500];
   flakes5 = [];
   for (i = 0; i < pos5.length; i++) {
@@ -120,7 +120,7 @@
       if (letters5.position.x < 165) {letters5.position.x = 165;}
     }
 
-    // coffee cups 1 animation
+    // cups 1 animation
     for (i = 0; i < pos1.length; i++) {
       pos1[i] = (pos1[i] + 0.00050) % 1;
       tmp1 = way1(pos1[i]);
@@ -128,7 +128,7 @@
       flakes1[i].position.y = tmp1[1];
     }
 
-    // coffee cups 2 animation
+    // cups 2 animation
     for (i = 0; i < pos2.length; i++) {
       pos2[i] = (pos2[i] + 0.00150) % 1;
       tmp2 = way2(pos2[i]);
@@ -136,7 +136,7 @@
       flakes2[i].position.y = tmp2[1];
     }
 
-    // coffee cups 3 animation
+    // cups 3 animation
     for (i = 0; i < pos3.length; i++) {
       pos3[i] = (pos3[i] + 0.00075) % 1;
       tmp3 = way3(pos3[i]);
@@ -144,7 +144,7 @@
       flakes3[i].position.y = tmp3[1];
     }
 
-    // coffee cups 4 animation
+    // cups 4 animation
     for (i = 0; i < pos4.length; i++) {
       pos4[i] = (pos4[i] + 0.00125) % 1;
       tmp4 = way4(pos4[i]);
@@ -152,7 +152,7 @@
       flakes4[i].position.y = tmp4[1];
     }
 
-    // coffee cups 5 animation
+    // cups 5 animation
     for (i = 0; i < pos5.length; i++) {
       pos5[i] = (pos5[i] + 0.00100) % 1;
       tmp5 = way5(pos5[i]);
@@ -167,7 +167,7 @@
   path.fillColor = 'white';
 
   // white background - bottom
-  var bottom = new Rectangle(0, 475, 990, 50);
+  var bottom = new Rectangle(0, 475, 990, 75);
   var path = new Path.Rectangle(bottom);
   path.fillColor = 'white';
 
