@@ -4,6 +4,6 @@
 
 # <a href="https://cdn.rawgit.com/jelena-simovic-rota/cls-animation/05f341ef/start-snowflakes.html">CLS animation with snowflakes</a>
 
-# <a href="https://cdn.rawgit.com/jelena-simovic-rota/cls-animation/05f341ef/start-decorations.html">CLS animation with Christmas decoration</a>
+# <a href="https://cdn.rawgit.com/jelena-simovic-rota/cls-animation/2a7519b2/animation/cls-decorations.html">CLS animation with Christmas decoration</a>
 
 Icons designed by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com">Flaticon</a>.
