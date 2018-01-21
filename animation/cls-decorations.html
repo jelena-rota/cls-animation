@@ -19,11 +19,11 @@
   var tmp1, tmp2, tmp3, tmp4, tmp5;
 
   // letters
-  var letters = new PointText({point: [0, 275], content: 'Geschäftsbericht', justification: 'right'});
-  var letters2 = new PointText({point: [0, 125], content: '', justification: 'right'});
+  var letters = new PointText({point: [0, 262.5], content: 'Geschäftsbericht', justification: 'right'});
+  var letters2 = new PointText({point: [0, 100], content: '', justification: 'right'});
   var letters3 = new PointText({point: [0, 425], content: '', justification: 'right'});
-  var letters4 = new PointText({point: [0, 275], content: '', justification: 'right'});
-  var letters5 = new PointText({point: [990, 275], content: '', justification: 'left'});
+  var letters4 = new PointText({point: [0, 262.5], content: '', justification: 'right'});
+  var letters5 = new PointText({point: [990, 262.5], content: '', justification: 'left'});
 
   group1 = new Group(letters, letters2, letters3, letters4, letters5);
   group1.style = {fontFamily: 'Open Sans', fontSize: 33, fillColor: 'black'};
@@ -52,7 +52,7 @@
   var pos1 = [0/500, 125/500, 250/500, 375/500];
   flakes1 = [];
   for (i = 0; i < pos1.length; i++) {
-    flakes1[i] = new Raster ('images/decoration-1.png');
+    flakes1[i] = new Raster ('images/decoration-1.svg');
     flakes1[i].scale(0.10);
     flakes1[i].position = way1(pos1[i]);
   }
@@ -62,7 +62,7 @@
   var pos2 = [62.5/500, 187.5/500, 312.5/500, 437.5/500];
   flakes2 = [];
   for (i = 0; i < pos2.length; i++) {
-    flakes2[i] = new Raster ('images/decoration-2.png');
+    flakes2[i] = new Raster ('images/decoration-2.svg');
     flakes2[i].scale(0.075);
     flakes2[i].position = way2(pos2[i]);
   }
@@ -72,7 +72,7 @@
   var pos3 = [0/500, 125/500, 250/500, 375/500];
   flakes3 = [];
   for (i = 0; i < pos3.length; i++) {
-    flakes3[i] = new Raster ('images/decoration-3.png');
+    flakes3[i] = new Raster ('images/decoration-3.svg');
     flakes3[i].scale(0.10);
     flakes3[i].position = way3(pos3[i]);
   }
@@ -82,7 +82,7 @@
   var pos4 = [62.5/500, 187.5/500, 312.5/500, 437.5/500];
   flakes4 = [];
   for (i = 0; i < pos4.length; i++) {
-    flakes4[i] = new Raster ('images/decoration-4.png');
+    flakes4[i] = new Raster ('images/decoration-4.svg');
     flakes4[i].scale(0.075);
     flakes4[i].position = way4(pos4[i]);
   }
@@ -92,7 +92,7 @@
   var pos5 = [0/500, 125/500, 250/500, 375/500];
   flakes5 = [];
   for (i = 0; i < pos5.length; i++) {
-    flakes5[i] = new Raster ('images/decoration-5.png');
+    flakes5[i] = new Raster ('images/decoration-5.svg');
     flakes5[i].scale(0.10);
     flakes5[i].position = way5(pos5[i]);
   }
@@ -107,26 +107,26 @@
 
     letters2.position.x += 2.0;
     if (letters2.bounds.right > 660) {
-      letters2.content = 'Rapport annuel'; letters2.fillColor = 'black';
+      letters2.content = 'Rapport annuel';
       if (letters2.position.x > 845) {letters2.position.x = 845;}
     }
 
     letters3.position.x += 2.0;
     if (letters3.bounds.right > 660) {
-      letters3.content = 'Relazione annuale'; letters3.fillColor = 'black';
+      letters3.content = 'Relazione annuale';
       if (letters3.position.x > 825) {letters3.position.x = 825;}
     }
 
     letters4.position.x += 2.0;
     if (letters4.bounds.right > 660) {
-      letters4.content = 'Annual report'; letters4.fillColor = 'black';
+      letters4.content = 'Annual report';
       if (letters4.position.x > 860) {letters4.position.x = 860;}
     }
 
     letters5.position.x -= 2.0;
     if (letters5.bounds.left < 330) {
       letters5.content = 'Geschäftsbericht';
-      if (letters5.position.x < 165) {letters5.position.x = 165;}
+      if (letters5.position.x < 150) {letters5.position.x = 150;}
     }
 
     // decorations 1 animation
@@ -176,7 +176,7 @@
   path.fillColor = 'white';
 
   // white background - bottom
-  var bottom = new Rectangle(0, 475, 990, 50);
+  var bottom = new Rectangle(0, 475, 990, 100);
   var path = new Path.Rectangle(bottom);
   path.fillColor = 'white';
 
