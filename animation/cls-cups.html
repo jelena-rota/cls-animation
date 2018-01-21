@@ -11,7 +11,7 @@
   <script type="text/javascript" src="library/paper-full.js"></script>
   <script type="text/paperscript" canvas="canvas">
 
-  // variables
+  //variables
   var letters, letters2, letters3, letters4, letters5;
   var top, middle, bottom, path;
   var flakes1, flakes2, flakes3, flakes4, flakes5;
@@ -19,11 +19,11 @@
   var tmp1, tmp2, tmp3, tmp4, tmp5;
 
   // letters
-  var letters = new PointText({point: [0, 275], content: 'Geschäftsbericht', justification: 'right'});
-  var letters2 = new PointText({point: [0, 125], content: '', justification: 'right'});
+  var letters = new PointText({point: [0, 262.5], content: 'Geschäftsbericht', justification: 'right'});
+  var letters2 = new PointText({point: [0, 100], content: '', justification: 'right'});
   var letters3 = new PointText({point: [0, 425], content: '', justification: 'right'});
-  var letters4 = new PointText({point: [0, 275], content: '', justification: 'right'});
-  var letters5 = new PointText({point: [990, 275], content: '', justification: 'left'});
+  var letters4 = new PointText({point: [0, 262.5], content: '', justification: 'right'});
+  var letters5 = new PointText({point: [990, 262.5], content: '', justification: 'left'});
   group1 = new Group(letters, letters2, letters3, letters4, letters5);
   group1.style = {fontFamily: 'Open Sans', fontSize: 33, fillColor: 'black'};
 
@@ -73,7 +73,7 @@
   }
   var tmp3;
 
-  // cups 4
+  // coffee cups 4
   var pos4 = [62.5/500, 187.5/500, 312.5/500, 437.5/500];
   flakes4 = [];
   for (i = 0; i < pos4.length; i++) {
@@ -101,23 +101,23 @@
     if (letters.bounds.right > 660) {letters.content = '';}
     letters2.position.x += 2.0;
     if (letters2.bounds.right > 660) {
-      letters2.content = 'Rapport annuel'; letters2.fillColor = 'black';
+      letters2.content = 'Rapport annuel';
       if (letters2.position.x > 845) {letters2.position.x = 845;}
     }
     letters3.position.x += 2.0;
     if (letters3.bounds.right > 660) {
-      letters3.content = 'Relazione annuale'; letters3.fillColor = 'black';
+      letters3.content = 'Relazione annuale';
       if (letters3.position.x > 825) {letters3.position.x = 825;}
     }
     letters4.position.x += 2.0;
     if (letters4.bounds.right > 660) {
-      letters4.content = 'Annual report'; letters4.fillColor = 'black';
+      letters4.content = 'Annual report';
       if (letters4.position.x > 860) {letters4.position.x = 860;}
     }
     letters5.position.x -= 2.0;
     if (letters5.bounds.left < 330) {
       letters5.content = 'Geschäftsbericht';
-      if (letters5.position.x < 165) {letters5.position.x = 165;}
+      if (letters5.position.x < 150) {letters5.position.x = 150;}
     }
 
     // cups 1 animation
